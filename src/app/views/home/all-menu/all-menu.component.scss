@@ -1,0 +1,96 @@
+nb-checkbox {
+  margin-bottom: 1rem;
+}
+
+.form-inline [fullWidth] {
+  flex: 1;
+}
+
+.form-inline > * {
+  margin: 0 1.5rem 1.5rem 0;
+}
+
+nb-card.inline-form-card nb-card-body {
+  padding-bottom: 0;
+}
+.card-customer{
+  width: 15%;
+  height: 60%;
+  border-radius:15px;
+  background-color:rgb(28, 152, 209);
+}
+.card-title{
+  color: white;
+  margin-left: 68px;
+}
+.card-text-customer{
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  margin-left: 65px;
+}
+
+
+.card-inventory{
+  width: 15%;
+  height: 60%;
+  border-radius:15px;
+  background-color:rgb(235, 175, 107);
+}
+
+.card-text-inventory{
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  margin-left: 5px;
+}
+
+.card-report{
+  width: 15%;
+  height: 60%;
+  border-radius:15px;
+  background-color:rgb(228, 71, 131);
+}
+  .card-text-report{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin-left:55px;
+  
+  
+  }
+  .card-stock{
+    width: 15%;
+    height: 60%;
+    // margin-left: 7%;
+    border-radius:15px;
+    background-color:rgb(91, 98, 133);
+  }
+  .card-text-stock{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 30px;
+
+
+  }
+  .card-profile{
+    width: 15%;
+    height: 60%;
+    border-radius:15px;
+    background-color:rgb(146, 233, 160);
+  }
+  .card-text-profile{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 25px;
+  
+  
+  }
+  
+  // @media only screen and (min-width: 1400px) {
+  //   p {
+  //       font-size: 14px
+  //   }
+  // }

@@ -8,11 +8,13 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { ForgotComponent } from './views/login/forgot-password/forgot.component';
+import { IntroductionComponent } from './views/terms-conditions/introduction/introduction.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'introduction',
     pathMatch: 'full',
   },
   {
@@ -37,6 +39,13 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'forgot',
+    component: ForgotComponent,
+    data: {
+      title: 'Forgot Page'
+    }
+  },
+  {
     path: 'register',
     component: RegisterComponent,
     data: {
@@ -44,31 +53,44 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'introduction',
+    component: IntroductionComponent,
+    data: {
+      title: 'Introduction Page'
+    }
+  },
+  
+  {
     path: '',
     component: DefaultLayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Menu'
     },
     children: [
       {
-        path: 'base',
-        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+        path: 'home',
+        loadChildren: () => import('./views/home/home.module').then(m => m.MenuModule)
       },
       {
-        path: 'buttons',
-        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+        path: 'customer',
+        loadChildren: () => import('./views/customer/customer.module').then(m => m.CustomerModule)
       },
       {
-        path: 'charts',
-        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+        path: 'inventory',
+        loadChildren: () => import('./views/inventory/inventory.module').then(m => m.InventoryModule)
       },
       {
-        path: 'dashboard',
-        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+        path: 'stock',
+        loadChildren: () => import('./views/stock-manager/stock.module').then(m => m.StockModule)
+      },
+    
+      {
+        path: 'shop',
+        loadChildren: () => import('./views/shop-manager/shop.module').then(m => m.ShopModule)
       },
       {
-        path: 'icons',
-        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
+        path: 'analytic',
+        loadChildren: () => import('./views/analytics/analytic.module').then(m => m.AnalyticModule)
       },
       {
         path: 'notifications',
@@ -84,6 +106,7 @@ export const routes: Routes = [
       }
     ]
   },
+  
   { path: '**', component: P404Component }
 ];
 
